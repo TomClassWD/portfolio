@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de Thomas - Desarrollador Web</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <button id="menu-toggle" aria-label="Abrir menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="logo">TomClass &lt;&gt;</div>
+                <ul id="menu">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#sobre">Sobre mí</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio">
+            <div class="contenido-inicio">
+                <h1>Hola, soy <span class="nombre">Thomas</span></h1>
+                <p>Soy <span id="typed-text"></span></p>
+                <a href="#contacto" class="btn-contacto">Contáctame</a>
+            </div>
+        </section>
+
+        <section id="sobre" class="fade-in">
+            <h2>Sobre mí</h2>
+            <p>Soy un joven desarrollador web de 23 años, apasionado por crear experiencias digitales atractivas y funcionales. Estoy comenzando mi carrera en el mundo del desarrollo web y estoy emocionado por aprender y crecer en esta industria en constante evolución.</p>
+            <h3>Mis habilidades:</h3>
+            <ul class="habilidades">
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>Node.js</li>
+                <li>Git</li>
+            </ul>
+        </section>
+
+        <section id="proyectos" class="fade-in">
+            <h2>Proyectos</h2>
+            <div class="grid-proyectos">
+                <article class="proyecto">
+                    <h3>Página web personal</h3>
+                    <p>Una página web responsive que muestra información sobre mí y mis habilidades.</p>
+                    <p>Tecnologías: HTML, CSS, JavaScript</p>
+                    <a href="#" class="btn-proyecto">Ver proyecto</a>
+                </article>
+                <article class="proyecto">
+                    <h3>Aplicación de lista de tareas</h3>
+                    <p>Una aplicación web para gestionar tareas diarias con funcionalidades de agregar, eliminar y marcar como completadas.</p>
+                    <p>Tecnologías: React, CSS</p>
+                    <a href="#" class="btn-proyecto">Ver proyecto</a>
+                </article>
+            </div>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <div id="alerta-mensaje" class="alerta" style="display: none;"></div>
+            <form id="formulario-contacto" action="https://formspree.io/f/xzzpnypk" method="POST">
+                <input type="text" name="nombre" placeholder="Nombre" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <textarea name="mensaje" placeholder="Mensaje" required></textarea>
+                <button type="submit" class="btn-enviar">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Desarrollado por Thomas. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <div id="cursor-personalizado"></div>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+</body>
+</html>
