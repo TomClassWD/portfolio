@@ -123,26 +123,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
     menuToggle.addEventListener('click', function() {
         menu.classList.toggle('active');
-        document.body.classList.toggle('menu-open');
+        // Opcional: animar las barras del botón de menú
+        this.classList.toggle('active');
     });
 
     // Cerrar el menú al hacer clic en un enlace
-    const menuLinks = menu.getElementsByTagName('a');
-    for (let i = 0; i < menuLinks.length; i++) {
-        menuLinks[i].addEventListener('click', function() {
+    const menuLinks = menu.querySelectorAll('a');
+    menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
             menu.classList.remove('active');
-            document.body.classList.remove('menu-open');
+            menuToggle.classList.remove('active');
         });
-    }
-
-    // Cerrar el menú al hacer clic fuera de él
-    document.addEventListener('click', function(event) {
-        const isClickInsideMenu = menu.contains(event.target);
-        const isClickOnMenuToggle = menuToggle.contains(event.target);
-
-        if (!isClickInsideMenu && !isClickOnMenuToggle && menu.classList.contains('active')) {
-            menu.classList.remove('active');
-            document.body.classList.remove('menu-open');
-        }
     });
 });
